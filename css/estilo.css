@@ -1,0 +1,80 @@
+/*sponsors*/
+h4 {
+  background-color: rgba(78, 78, 78, 0.452);
+  font-size: 5vh;
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 5px 5px 8px #444343;
+  color: #01a517;
+  margin: 25px;
+  text-align: center;
+  width: 90% center; }
+
+#galeria {
+  margin: 1rem auto;
+  max-width: 95%;
+  height: auto;
+  overflow: hidden;
+  column-count: 4; }
+  #galeria .galery {
+    transition: transform .4s;
+    max-width: 100%;
+    height: auto; }
+  #galeria .galery:hover {
+    transform: scale(1.2);
+    border-radius: 15%; }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(calc(-250px * 7)); } }
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 250px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: cover; }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2; }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg); }
+  .slider::before {
+    left: 0;
+    top: 0; }
+  .slider .slide-track {
+    animation: scroll 35s linear infinite;
+    display: flex;
+    width: calc(250px * 14); }
+  .slider .slide {
+    height: 100px;
+    width: 550px; }
+
+footer {
+  width: cover; }
+  footer div div div {
+    margin: initial; }
+    footer div div div a {
+      font-size: 2vh;
+      color: #dfdddd;
+      text-shadow: 5px 5px 3px black; }
+    footer div div div h5 {
+      color: #ffffff;
+      font-size: 2.5vh;
+      padding: 1vh;
+      margin-left: 0; }
+  footer div div div.d-flex p {
+    margin-left: 0; }
+    footer div div div.d-flex p .copir {
+      margin: 5; }
+    footer div div div.d-flex p .codesur {
+      margin-right: 0; }

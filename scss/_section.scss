@@ -1,0 +1,100 @@
+/*sponsors*/
+
+h4{
+	background-color: rgba(78, 78, 78, 0.452);
+	font-size: 5vh;
+	font-family: 'Permanent Marker', cursive;
+	text-shadow: 5px 5px 8px rgb(68, 67, 67);
+	color: rgb(1, 165, 23);
+	margin:25px;
+	text-align:center;
+	width:90% center;
+	
+
+	
+}
+
+#galeria {
+	margin: 1rem auto;
+	max-width:  95%;;
+	height: auto;
+	overflow: hidden;
+	column-count: 4;
+	
+	.galery {
+		transition: transform .4s; 
+		max-width: 100%;
+		height: auto;
+	}
+	
+	.galery:hover {
+		transform: scale(1.2);
+		border-radius: 15%;
+	}
+	
+
+}
+
+
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 35s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+
+// Styling
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 250px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: cover;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 550px;
+        
+	}
+
+	
+	
+}
+
+
